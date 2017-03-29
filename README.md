@@ -1,6 +1,6 @@
 # Lendi Demo
 
-Objective: Create an application that retrieves data from an API and render that information using both React and Redux. And write accompanying tests using Jest.
+Objective: An application that retrieves data from an API and render that information using both React and Redux. And write accompanying tests using Jest.
 
 Run time setting
 
