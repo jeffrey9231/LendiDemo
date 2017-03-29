@@ -2,6 +2,7 @@
 
 An application that retrieves data from an API and render that information using both React and Redux. And write accompanying tests using Jest.
 
+
 Run time setting
 
 1. cd to project directory
