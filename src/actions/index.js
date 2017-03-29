@@ -1,6 +1,8 @@
 export const REQUEST_POSTS = 'REQUEST_POSTS'
 export const RECEIVE_POSTS = 'RECEIVE_POSTS'
 export const INVALIDATE_REDDIT = 'INVALIDATE_REDDIT'
+export const SHOW_IMG = 'SHOW_IMG'
+export const HIDE_IMG = 'HIDE_IMG'
 
 //action creater
 export const invalidateReddit = urlData => ({
@@ -18,6 +20,17 @@ export const receivePosts = (urlData, json) => ({
   urlData,
   posts: json,
   receivedAt: Date.now()
+})
+
+export const showImg = (urlData,imgUrl) => ({
+  type: SHOW_IMG,
+  urlData,
+  imgUrl
+})
+
+export const hideImg = (urlData) => ({
+  type: HIDE_IMG,
+  urlData
 })
 
 

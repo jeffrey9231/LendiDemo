@@ -5,6 +5,7 @@ import Posts from '../components/Posts'
 
 
 function setup() {
+
   const props = {
     posts: [{
 		"albumId": 99,
@@ -12,7 +13,8 @@ function setup() {
 		"title": "accusamus beatae ad facilis cum similique qui sunt",
 		"url": "http://placehold.it/22222/9fiv893mhjdfk42c952",
 		"thumbnailUrl": "http://placehold.it/150/92c952"
-    }]
+    }],
+	onClick:()=>{}
   }
 
   const enzymeWrapper = shallow(<Posts {...props} />)
@@ -41,13 +43,11 @@ describe('components', () => {
       
       expect(enzymeWrapper.find('tr').length).toBe(2)
 
-	  expect(enzymeWrapper.find('tbody td').at(0).text()).toBe('accusamus beatae ad facilis cum similique qui sunt')
+	  expect(enzymeWrapper.find('[src="http://placehold.it/150/92c952"]').length).toBe(1)
 	  
-	  expect(enzymeWrapper.find('tbody td').at(1).text()).toBe('99')
+	  expect(enzymeWrapper.find('tbody td').at(1).text()).toBe('accusamus beatae ad facilis cum similique qui sunt')
 	  
-	  expect(enzymeWrapper.find('tbody td').at(2).text()).toBe('http://placehold.it/22222/9fiv893mhjdfk42c952')
-	  
-	  expect(enzymeWrapper.find('tbody td').at(3).text()).toBe('http://placehold.it/150/92c952')
+	  expect(enzymeWrapper.find('tbody td').at(2).text()).toBe('99')
 
     })
    
