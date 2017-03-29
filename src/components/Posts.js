@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import Img from '../components/Img'
 
 const Posts = ({posts, onClick}) => (
 	
@@ -15,7 +16,8 @@ const Posts = ({posts, onClick}) => (
 	  {posts.map((post) =>  
 	  
 		  <tr key={post.id}>		  
-			<td><span className={'myImg'} onClick={e => onClick(post.url)} ><img src={post.thumbnailUrl} alt={post.title} /></span></td>
+			
+			<td><Img imgUrl={post.url} thumbnailUrl={post.thumbnailUrl} onClick={(e) => onClick(e)} /></td>
 			<td>{post.title}</td>
 			<td>{post.albumId}</td>
 		  </tr>
